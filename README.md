@@ -1,2 +1,2 @@
 # like-linktree
-Prettier than link-tree
+:evergreen_tree: Prettier than link-tree
