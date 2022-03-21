@@ -1,0 +1,31 @@
+<div class="pizza-container">
+  <p class="title">{{ text }}</p>
+
+  <img [src]="'./../../../assets/images/promocao/'+imgPath+'-min.jpeg'" [alt]="" [title]="">
+
+  <p class="description">
+    {{ description }}
+  </p>
+
+  <p class="advise" *ngIf="precoTamanhoG && precoTamanhoP">Clique no tamanho para pedir</p>
+
+  <ion-button
+  *ngIf="precoTamanhoG"
+  title="Comprar pizza tamanho grande"
+  [href]="linkTamanhoG"
+  fill="solid"
+  class="solid-white"
+  mode="ios">
+    Grande: <strong style="margin-left: 8px">R$ {{ precoTamanhoG }}</strong>
+  </ion-button>
+
+  <ion-button
+  *ngIf="precoTamanhoP"
+  title="Comprar broto"
+  [href]="linkTamanhoP"
+  fill="outline"
+  class="outline-white"
+  mode="ios">
+    Broto: <strong style="margin-left: 8px">R$ {{ precoTamanhoP }}</strong>
+  </ion-button>
+</div>

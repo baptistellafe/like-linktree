@@ -1,0 +1,59 @@
+<ion-content
+[forceOverscroll]="false">
+
+  <section class="inicio-section">
+
+    <div class="header">
+      <img
+      class="animate__animated animate__fadeInDown"
+      src="./../../assets/images/abigpizzas.png"
+      title="A Big Pizzas&trade;"
+      alt="A Big Pizzas">
+
+      <ion-text mode="ios">
+        <p class="animate__animated animate__fadeInDown">BIG PIZZAS, SMALL PROBLEMS</p>
+      </ion-text>
+    </div>
+
+    <div class="content">
+      
+      <ion-button
+      (click)="redirect(btn.isLink, btn.router)"
+      class="has-effect animate__animated"
+      [ngClass]="[btn.class, btn.isInverted ? 'is-inverted' : 'not-inverted']"
+      *ngFor="let btn of btns"
+      [title]="btn.title"
+      shape="round"
+      [fill]="btn.fill"
+      mode="ios">
+      <strong style="margin-right: 5px;" *ngIf="btn.textStrong && btn.isInverted">{{ btn.textStrong }}</strong> {{ btn.text }} <strong style="margin-left: 5px;" *ngIf="btn.textStrong && !btn.isInverted">{{ btn.textStrong }}</strong><img [src]="btn.hasImage" alt="xmenu" title="XMENU" *ngIf="btn.hasImage">
+      </ion-button>
+  
+      <div class="social-btns">
+        <ion-button
+        target="_blank"
+        [href]="btn.router"
+        class="has-effect animate__animated social"
+        *ngFor="let btn of socialBtns"
+        [title]="btn.title"
+        shape="round"
+        fill="clear"
+        mode="ios">
+          <ion-icon [name]="btn.icon"></ion-icon> 
+        </ion-button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <ion-text>
+
+        <p class="adress has-effect animate__animated">
+          Rua Marechal Hermes, 5 - Boqueirão - Santos
+        </p>
+
+        <p class="has-effect animate__animated">Feito com <ion-icon name="heart"></ion-icon> em Santos por <a target="_blank" href="https://www.instagram.com/baptistellafe/" style="margin-left: 5px;"><span>@</span>baptistellafe</a></p>
+
+      </ion-text>
+    </div>
+  </section>
+</ion-content>

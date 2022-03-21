@@ -1,0 +1,33 @@
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-back-button
+    slot="start"
+    text="Voltar"
+    mode="ios">
+    </ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <section class="cardapio">
+    <swiper
+    #swiper
+    [config]="config"
+    (swiper)="onSwiper($event)"
+    (slideChange)="onSlideChange($event)">
+    <ng-template swiperSlide *ngFor="let pizza of pizzas">
+      <a-big-pizzas
+        class="animate__animated fadeIn"
+        [text]="pizza.text"
+        [imgPath]="pizza.imgPath"
+        [description]="pizza.description"
+        [precoTamanhoG]="pizza.precoTamanhoG"
+        [precoTamanhoP]="pizza.precoTamanhoP"
+        [linkTamanhoG]="pizza.linkTamanhoG"
+        [linkTamanhoP]="pizza.linkTamanhoP">
+      </a-big-pizzas>
+    </ng-template>
+    </swiper>
+
+  </section>
+</ion-content>

@@ -1,0 +1,65 @@
+:host {
+  display: block;
+  
+  .pizza-container {
+    position: relative;
+
+    ion-button {
+      --border-radius: 0;
+      margin: 5px 0 0 0;
+      font-size: 12px;
+
+      strong {
+        font-size: 18px;
+      }
+
+      &:hover {
+        transform: none;
+      }
+    }
+  
+    img {
+      object-fit: contain;
+      border: 1px solid #333;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    p {
+      margin: 0;
+      padding: 16px;
+  
+      &.title {
+        font-weight: bold;
+        text-transform: uppercase;
+        background: rgba(0, 0, 0, .7);
+        color: var(--white);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-size: 12px;
+      }
+  
+      &.description {
+        color: var(--white);
+        font-size: 11px;
+        border: 1px solid #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 30px;
+      }
+
+      &.advise {
+        background: var(--orange);
+        color: var(--white);
+        font-size: 10px;
+        margin-top: 5px;
+        text-align: center;
+        padding: 5px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

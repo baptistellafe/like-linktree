@@ -1,0 +1,62 @@
+
+
+section.projeto-lorena {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 16px 32px 16px;
+  overflow: hidden;
+
+  .video-container {
+    position: relative;
+
+    video {
+      max-width: 200px;
+      margin: 0 auto;
+      pointer-events: none;
+    }
+
+    ion-button {
+      position: absolute;
+      bottom: 10px;
+      width: auto;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  h1 {
+    color: var(--white);
+    margin-bottom: -75px;
+    max-width: 320px;
+    text-shadow: var(--black) -1px 0, var(--black) 0 -1px,
+    var(--black) 1px 0, var(--black) 0 1px,
+    var(--black) -1px -1px, var(--black) 1px 1px;
+    z-index: 10;
+    font-size: 20px;
+
+    strong {
+      color: var(--orange);
+    }
+  }
+
+  p {
+    color: var(--white);
+    max-width: 360px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  > ion-button {
+    margin-top: 10px;
+  }
+
+  .social-btns {
+    margin-top: 16px;
+    display: flex;
+    align-items: cen;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,148 @@
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+@import '~animate.css/animate.min.css';
+@import '~swiper/scss';
+@import '~swiper/scss/navigation';
+@import '~swiper/scss/pagination';
+
+
+:root {
+  --black: #000000;
+  --orange: #f46e00;
+  --dark-orange: #ba3e00;
+  --light-orange: #ff9f3f;
+  --white: #ffffff;
+}
+
+ion-header { background: var(--black); }
+ion-toolbar, ion-content { --background: var(--black); }
+
+ion-header {
+  ion-toolbar {
+    --padding-top: 16px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-bottom: 16px;
+  }
+}
+
+ion-button {
+  font-size: 12px;
+  height: 40px;
+  --color: var(--white);
+  width: 100%;
+  max-width: 270px;
+  text-transform: uppercase;
+
+  &.solid-orange {
+    --background: linear-gradient(to right, var(--dark-orange), var(--orange));
+    --background-hover: linear-gradient(to right, var(--orange), var(--dark-orange));
+    --background-focused: linear-gradient(to right, var(--dark-orange), var(--dark-orange));
+    --background-activated: linear-gradient(to right, var(--orange), var(--dark-orange));
+    --border-color: var(--dark-orange);
+    --transition: all 0.2s ease;
+    transition: all 0.4s ease;
+    --box-shadow: 0 3px 0px var(--dark-orange);
+
+    &:hover {
+      transform: translateY(-20px);
+    }
+  }
+
+  &.solid-white {
+    --background: var(--white);
+    --background-hover: var(--white);
+    --background-focused: var(--white);
+    --background-activated: var(--white);
+    --border-color: var(--white);
+    --transition: all 0.2s ease;
+    transition: all 0.4s ease;
+    --color: var(--black);
+  }
+  
+  &.outline-white {
+    --border-color: var(--white);
+    --border-width: 1px;
+    font-weight: 300;
+    --background-focused: linear-gradient(to right, var(--dark-orange), var(--dark-orange));
+    --background-activated: transparent;
+  }
+
+  &.social {
+    --color: white;
+    --color-hover: var(--orange);
+    font-size: 22px;
+    margin: 0;
+    --padding-start: 10px;
+    --padding-end: 8px;
+  }
+
+  img {
+    width: 60px;
+    margin-left: 5px;
+  }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale( .75 ); }
+  20% { transform: scale( 1 ); }
+  40% { transform: scale( .75 ); }
+  60% { transform: scale( 1 ); }
+  80% { transform: scale( .75 ); }
+  100% { transform: scale( .75 ); }
+}
+
+*::selection {
+  background: var(--orange);
+  color: var(--white);
+}
+
+ion-alert.bigpizza-alert {
+  .alert-button.sc-ion-alert-ios.primary {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .alert-button.sc-ion-alert-ios.secondary {
+    color: var(--black);
+    font-size: 14px;
+  }
+}
+
+ion-back-button {
+  --color: var(--orange);
+}
+
+ion-chip {
+  --background: linear-gradient(to right, var(--dark-orange), var(--orange));
+  color: var(--white);
+  font-weight: bold;
+  height: auto;
+  border: 1px solid var(--dark-orange);
+  margin: 0;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: var(--white);
+  text-shadow: 2px 2px 2px var(--black);
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 16px;
+  color: var(--white);
+}
+
+.swiper-pagination-current {
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.swiper-pagination-total {
+  color: var(--white);
+  font-size: 18px;
+}

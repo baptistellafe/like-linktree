@@ -1,0 +1,59 @@
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-back-button
+    slot="start"
+    text="Voltar"
+    mode="ios">
+    </ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [forceOverscroll]="false">
+  <section class="projeto-lorena">
+    <h1 class="has-effect animate__animated">Noite da pizza para <strong class="has-effect animate__animated">crianças da comunidade</strong></h1>
+
+    <div class="video-container">
+      <video [autoplay]="true" [loop]="true" [muted]="true" >
+        <source src="./../../assets/videos/projetolorena.mp4" type="video/mp4" loop>
+      </video>
+
+      <ion-button
+      class="has-effect animate__animated solid-orange"
+      target="_blank"
+      href="https://api.whatsapp.com/send?phone=5513981367689"
+      fill="solid"
+      shape="round"
+      mode="ios">
+        Faça uma doação
+      </ion-button>
+    </div>
+
+    <p class="has-effect animate__animated">A turma de super entregadores distribuem pizzas e outras doações como roupas e calçados, brinquedos e cestas básicas para as crianças. Tudo é devidamente organizado para garantir a segurança e alegria dos pequenos.</p>
+
+    <ion-button
+      class="has-effect animate__animated outline-white"
+      title="Continue lendo no G1"
+      href="https://g1.globo.com/sp/santos-regiao/noticia/2021/12/26/motoboys-criam-projeto-que-distribui-pizzas-de-graca-a-criancas-de-bairros-carentes-no-litoral-de-sp.ghtml"
+      target="_blank"
+      fill="outline"
+      shape="round"
+      mode="ios">
+        Continuar <strong style="margin-left: 5px;">lendo</strong>
+      </ion-button>
+
+      <div class="social-btns">
+        <ion-button
+        title="Continue lendo no G1"
+        target="_blank"
+        [href]="btn.router"
+        class="has-effect animate__animated social"
+        *ngFor="let btn of socialBtns"
+        [title]="btn.title"
+        shape="round"
+        fill="clear"
+        mode="ios">
+          <ion-icon [name]="btn.icon"></ion-icon> 
+        </ion-button>
+      </div>
+  </section>
+</ion-content>
